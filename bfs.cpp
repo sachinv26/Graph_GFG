@@ -8,29 +8,7 @@ void addEdge(vector<vector<int>> &adj,int u,int v)
     adj[v].push_back(u);
 }
 
-void BFS(vector<vector<int>> &adj,int s)
-{
-    int n=adj.size();
-    vector<bool> visited(n,false);
-    queue<int> q;
-    visited[s]=true;
-    q.push(s);
 
-    while(!q.empty())
-    {
-        int u=q.front();
-        q.pop();
-        cout<<u<<" ";
-        for(int v:adj[u])
-        {
-            if(!visited[v])
-            {
-                visited[v]=true;
-                q.push(v);
-            }
-        }
-    }
-}
 
 int main()
 {
